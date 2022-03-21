@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">День</th>
+        <th scope="col">Время</th>
+        <th scope="col">Температура</th>
+        <th scope="col">Направление</th>
+        <th scope="col">Скорость</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="el : ${cities}">
+        <th scope="row" th:text="${el.day}"></th>
+        <th th:text="${el.time}"></th>
+        <th th:text="${el.temperature}"></th>
+        <th th:text="${el.direction}"></th>
+        <th th:text="${el.speed}"></th>
+    </tr>
+    </tbody>
+</table>
+</table>
+</body>
+</html>
